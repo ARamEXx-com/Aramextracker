@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Tracking — DEMO</title>
+<title>Tracking</title>
 
 <style>
   :root{
@@ -22,7 +22,6 @@
   }
   .container{max-width:var(--max-width);margin:20px auto;padding:18px}
   .logo{text-align:center;font-size:34px;font-weight:900;letter-spacing:2px}
-  .demo-badge{text-align:center;background:rgba(0,0,0,0.35);padding:8px 12px;border-radius:8px;margin:10px auto;display:inline-block}
 
   .card{background:var(--card-bg);padding:18px;border-radius:12px;margin-top:12px}
   input{padding:10px;border:none;border-radius:8px;width:100%}
@@ -41,12 +40,11 @@
 <body>
 <div class="container">
 
-  <div class="logo">TRACKING — DEMO</div>
-  <div class="demo-badge">DEMO PAGE — NOT CONNECTED TO ANY REAL SYSTEM</div>
+  <div class="logo">TRACKING</div>
 
   <div class="card">
     <h3>Enter Tracking Code</h3>
-    <input id="codeInput" placeholder="Enter demo tracking number">
+    <input id="codeInput" placeholder="Enter tracking number">
     <button class="btn" onclick="trackNow()">TRACK</button>
 
     <div id="loader" class="loader">
@@ -54,7 +52,7 @@
     </div>
 
     <div id="result" class="result">
-      <h3>Tracking Details (DEMO)</h3>
+      <h3>Tracking Details</h3>
       <div id="detailLines"></div>
     </div>
   </div>
@@ -62,9 +60,8 @@
 </div>
 
 <script>
-const DEMO_CODE = "XXUK92502";
+const CODE = "XXUK92502";
 
-/* Updated details you requested */
 const LINES = [
   "<b>Status:</b> Not yet cleared",
   "<b>Origin:</b> Sana'a, Yemen",
@@ -74,8 +71,7 @@ const LINES = [
   "<b>Sender Address:</b> Sana'a, Yemen",
   "<b>Receiver:</b> Tebogo Komane",
   "<b>Receiver Phone:</b> +27 71 391 8138",
-  "<b>Receiver Address:</b> North West, South Africa, Ventersdorp, Phase 2, Boikhutsong",
-  "<b>Note:</b> DEMO ONLY — NOT REAL DATA"
+  "<b>Receiver Address:</b> North West, South Africa, Ventersdorp, Phase 2, Boikhutsong"
 ];
 
 function trackNow(){
@@ -93,7 +89,7 @@ function trackNow(){
   setTimeout(()=>{
     loader.style.display="none";
 
-    if(input === DEMO_CODE){
+    if(input === CODE){
       result.style.display="block";
       detailDiv.innerHTML = "";
 
@@ -109,7 +105,7 @@ function trackNow(){
 
     } else {
       result.style.display="block";
-      detailDiv.innerHTML = "<div class='line show'>❌ Invalid Tracking Number (Demo)</div>";
+      detailDiv.innerHTML = "<div class='line show'>❌ Invalid Tracking Number</div>";
     }
   },1500);
 }
